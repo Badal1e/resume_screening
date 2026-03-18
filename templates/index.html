@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Screening</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <a href="/history" class="back-btn">📊 View History</a>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 Resume Screening System</h1>
+    <p>Enter Job Description to find best candidates</p>
+
+    <form action="/rank" method="POST">
+        <textarea name="job_description" placeholder="Enter job description here..."></textarea>
+        <br>
+        <button type="submit">🔍 Rank Candidates</button>
+    </form>
+</div>
+
+</body>
+</html>

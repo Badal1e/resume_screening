@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📜 Previous Results</h1>
+
+    <table>
+        <tr>
+            <th>Job Description</th>
+            <th>Candidate ID</th>
+            <th>Category</th>
+            <th>Score</th>
+        </tr>
+
+        {% for row in data %}
+        <tr>
+            <td>{{ row.job_description[:50] }}...</td>
+            <td>{{ row.candidate_id }}</td>
+            <td>{{ row.category }}</td>
+            <td>{{ "%.2f"|format(row.score) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/" class="back-btn">⬅ Back</a>
+</div>
+
+</body>
+</html>
